@@ -10,7 +10,7 @@ class Yelp {
     // search business and theid Ids 
     search(location, radius, offset) {
        
-      return  fetch("https://api.yelp.com/v3/businesses/search?location="+location+"&limit=10" +"&radius="+ radius + "&offset=" + offset, {
+      return  fetch("https://api.yelp.com/v3/businesses/search?location="+location+"&limit=50" +"&radius="+ radius + "&offset=" + offset, {
             method: 'GET',
             headers: {
                 'Authorization': 'Bearer ' + this.apiKey
