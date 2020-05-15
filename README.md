@@ -9,4 +9,4 @@ $ node App.js --help <br>
 $ node App.js --location=[location](required) --radius=[radius](optional) --offset=[offset](optional)<br>
 $ node App.js --location=india<br>
 
-
+The result will be stored as json in file named- 'data.json'
