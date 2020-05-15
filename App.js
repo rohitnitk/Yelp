@@ -6,7 +6,7 @@ var argv = require('minimist')(process.argv.slice(2));
 const apiKey = 'j-3_--r4vS3MiAfwxRr09xoWlvRRDvm4hCGhL4R5pFm_OAq0X3UwveJ1wpKOjpYnk1AvYf7bgJwFSYOvCEVrDwVFe_RweVZ5dEF7me2BbQiYX8kvMu8q2ICZcdO6XnYx';
 
 var location ;
-var radius ='' ; // optional
+var radius ; // optional
 var offset ;  // optional
 
 getInput();
@@ -36,17 +36,20 @@ function getInput() {
 	if(typeof help !='undefined') {
 		console.log('-----Help----');
 		console.log('Usage: --location=[location](required!) --radius=[radius](optional) --offset=[offset](optional)');
-		return;
+		process.exit();
 	}
 	 location = argv.location;
 	if(typeof location =='undefined') {
 		console.log(" -> Please provide location alias, ex: --location=india");
-	    return ;
+	   process.exit();
 	}
 	radius = argv.radius;
 	offset = argv.offset;
 	if(typeof offset =='undefined') {
 		offset = 0;
+	}
+	if(typeof radius =='undefined') {
+		radius = 4000;
 	}
 	
 }
