@@ -1,0 +1,16 @@
+{
+  "name": "yelp",
+  "version": "1.0.0",
+  "description": "yelp class",
+  "main": "index.js",
+  "auther": "Rohit ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "minimist": "^1.2.5",
+    "node-fetch": "^2.6.0"
+  }
+}
